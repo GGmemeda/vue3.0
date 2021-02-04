@@ -55,7 +55,10 @@ export default ({command, mode}: ConfigEnv): UserConfig => {
                 },
             },
         },
-        define: {},
+        define: {
+          // 直接注入到window
+          PROJECT_NAME:'地产之眼'
+        },
         plugins: [
             vue(),
             ...createVitePlugins(viteEnv, isBuild),

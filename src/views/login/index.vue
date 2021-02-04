@@ -10,7 +10,7 @@ import {setToken} from "@/utils/auth";
 
 export default defineComponent({
   setup() {
-    const store = useStore()
+    const store = useStore();
     const state = store.state;
     console.log(state.app);
     store.dispatch('app/LOOK_VUX_ACTION');
@@ -19,7 +19,7 @@ export default defineComponent({
     })
     onMounted(() => {
       console.log(import.meta.env);
-      console.log(process.env);
+      console.log(import.meta);
     })
     function goHomePage(){
       setToken('aaaaaa');
